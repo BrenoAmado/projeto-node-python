@@ -5,7 +5,7 @@ export const useToken = async () => {
 };
 
 const env = {
-    local: 'http://ec2-44-205-123-204.compute-1.amazonaws.com:8081',
+    local: 'http://192.168.0.7:8081',
     dev: 'dev'
 };
 
