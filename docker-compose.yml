@@ -2,19 +2,19 @@ version: "3.8"
 services:
   back-end:
       build:
-        context: ./projeto-node-python/back-end
+        context: ./back-end
         dockerfile: Dockerfile
       ports:
         - 8081:8081
   front-end:
       build:
-        context: ./projeto-node-python/front-end
+        context: ./front-end
         dockerfile: Dockerfile
       ports:
         - 8082:8082
-  nginx:
-      build:
-        context: ./nginx
-        dockerfile: Dockerfile
-      ports:
-        - 80:80
+#  nginx:
+#      build:
+#        context: ./nginx
+#        dockerfile: Dockerfile
+#      ports:
+#        - 80:80
