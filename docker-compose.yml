@@ -1,0 +1,44 @@
+version: "3.8"
+services:
+  anima-back:
+      build:
+        context: ./anima/anima-mvp-back
+        dockerfile: Dockerfile
+      ports:
+        - 7070:7070
+  anima-front:
+      build:
+        context: ./anima/anima-mvp-front
+        dockerfile: Dockerfile
+      ports:
+        - 9090:9090
+  ultra-back:
+      build:
+        context: ./ultra/ultra-mvp-back
+        dockerfile: Dockerfile
+      ports:
+        - 7071:7071
+  ultra-front:
+      build:
+        context: ./ultra/ultra-mvp-front
+        dockerfile: Dockerfile
+      ports:
+        - 9091:9091
+  algar-back:
+      build:
+        context: ./algar/algar-mvp-back
+        dockerfile: Dockerfile
+      ports:
+        - 8081:8081
+  algar-front:
+      build:
+        context: ./algar/algar-mvp-front
+        dockerfile: Dockerfile
+      ports:
+        - 8082:8082
+  nginx:
+      build:
+        context: ./nginx
+        dockerfile: Dockerfile
+      ports:
+        - 80:80
